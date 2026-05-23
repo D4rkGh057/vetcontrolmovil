@@ -1,12 +1,3 @@
-export interface ClienteAPI {
-  id_cliente: string;
-  nombre: string;
-  apellido: string;
-  email: string;
-  telefono: string;
-  direccion: string;
-}
-
 export interface Mascota {
   id_mascota: string;
   nombre: string;
@@ -43,27 +34,11 @@ export interface Cita {
 }
 
 export interface HistorialMedico {
-  id: string;
+  id_historial: string;
   fecha: string;
-  motivo_consulta: string;
   diagnostico: string;
-  tratamiento: string;
-  observaciones?: string;
-  mascota_id: string;
-  usuario_id: string;
-  created_at: string;
-  updated_at: string;
-}
-
-export interface Cliente {
-  id: string;
-  nombre: string;
-  apellido: string;
-  email: string;
-  telefono: string;
-  direccion?: string;
-  created_at: string;
-  updated_at: string;
+  id_mascota: Mascota;
+  id_empresa: { id_empresa: string };
 }
 
 export interface Recordatorio {
